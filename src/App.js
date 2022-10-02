@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Card from "./components/Card"
+import {useState, useEffect, React} from 'react';
 
 function App() {
+
+  // function genRandom () {
+  //   return Math.round(20*Math.random());
+  // }
+  // function genArray(){
+  //   for (let i = 0; i < 10; i++){
+  //     push(genRandom());
+  //   }
+  // }
+
+  // const [character, setCharacters] = useState([]);
+
+  // const initialUrl = 'https://rickandmortyapi.com/api/character';
+
+  // const fetchCards = (url) => {
+  //   fetch(url)
+  //   .then((response) => response.json())
+  //   .then((data) => setCharacters(data.results))
+  //   .catch((error) => console.log(error))
+  // }
+  // useEffect (() => {
+  //   fetchCards(initialUrl);
+  // }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header>
+        <a href ="/" onClick={}>Rick and Morty Cards</a>
       </header>
+      <Card character={character}/>
     </div>
   );
 }
